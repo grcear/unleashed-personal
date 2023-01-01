@@ -1,6 +1,7 @@
 #include "../infrared_i.h"
 
 typedef enum {
+    SubmenuIndexUniversalMyTV
     SubmenuIndexUniversalTV,
     SubmenuIndexUniversalAudio,
     SubmenuIndexUniversalProjector,
