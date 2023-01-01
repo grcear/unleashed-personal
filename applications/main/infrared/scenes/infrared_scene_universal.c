@@ -17,6 +17,14 @@ static void infrared_scene_universal_submenu_callback(void* context, uint32_t in
 void infrared_scene_universal_on_enter(void* context) {
     Infrared* infrared = context;
     Submenu* submenu = infrared->submenu;
+    
+    
+    submenu_add_item(
+        submenu,
+        "My TV",
+        SubmenuIndexUniversalMyTV,
+        infrared_scene_universal_submenu_callback,
+        context);
 
     submenu_add_item(
         submenu,
