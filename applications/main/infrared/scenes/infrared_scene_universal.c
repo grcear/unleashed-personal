@@ -72,10 +72,13 @@ bool infrared_scene_universal_on_event(void* context, SceneManagerEvent event) {
     bool consumed = false;
 
     if(event.type == SceneManagerEventTypeCustom) {
-        if(event.event == SubmenuIndexUniversalTV) {
-            scene_manager_next_scene(scene_manager, InfraredSceneUniversalTV);
+        if(event.event == SubmenuIndexUniversalMyTV) {
+            scene_manager_next_scene(scene_manager, InfraredSceneUniversalMyTV);
             consumed = true;
-        } else if(event.event == SubmenuIndexUniversalAudio) {
+        }else if(event.event == SubmenuIndexUniversalAudio) {
+            scene_manager_next_scene(scene_manager, InfraredSceneUniversalAudio);
+            consumed = true;
+        }else if(event.event == SubmenuIndexUniversalAudio) {
             scene_manager_next_scene(scene_manager, InfraredSceneUniversalAudio);
             consumed = true;
         } else if(event.event == SubmenuIndexUniversalProjector) {
